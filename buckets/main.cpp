@@ -3,18 +3,17 @@
 #include <chrono>
 #include "BucketProblemSolver1.h"
 
-
 using namespace std;
 using Clock = chrono::high_resolution_clock;
-
-
 
 int main()
 {
 	int L, S, W, method;
 	bool showTime;
-	cin >> L >> S >> W >> method >> showTime;
 
+	cin >> L >> S >> W >> method >> showTime;  // Read user input
+
+	// Input validation
 	if (S <= 0 || L <= 0 || W < 0 || S > L || W > L ||
 		(method != 1 && method != 2) ||
 		(showTime != 0 && showTime != 1)) {
@@ -23,6 +22,7 @@ int main()
 		exit(1);
 	}
 
+	// Solve using method 1
 
 	if (method == 1) {
 

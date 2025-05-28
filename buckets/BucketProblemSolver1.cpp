@@ -1,12 +1,12 @@
 #include "BucketProblemSolver1.h"
 
 
-// Constructor: stores L, S, W and builds the graph
+// Ctor
 BucketProblemSolver1::BucketProblemSolver1(int large, int small, int wanted): L(large), S(small), W(wanted) {
     BuildGraph();
 }
 
-// builds all vertices and edges
+// Builds all vertices and edges
 void BucketProblemSolver1::BuildGraph() {
     int n = max(L, S) + 1;
     graph.MakeEmptyGraph(n); // adds all (big, small) states to the graph
@@ -23,6 +23,7 @@ void BucketProblemSolver1::BuildGraph() {
     }
 }
 
+// Possible next moves
 vector<BucketState> BucketProblemSolver1::GetLegalMoves(const BucketState& state) const {
     vector<BucketState> moves;
     int big = state.first;
@@ -59,6 +60,7 @@ vector<BucketState> BucketProblemSolver1::GetLegalMoves(const BucketState& state
     return moves;
 }
 
+// Find path using BFS
 vector<BucketState> BucketProblemSolver1::SolveWithBFS() {
     queue<BucketState> q;                      // Queue for BFS
     map<BucketState, BucketState> parent;      

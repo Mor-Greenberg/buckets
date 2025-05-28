@@ -1,6 +1,6 @@
 #include "DirectedGraph.h"
 
-// Creates an empty graph with n nodes
+// Creates all valid bucket states up to size n
 void DirectedGraph::MakeEmptyGraph(int n) {
     for (int big = 0; big < n; ++big) {
         for (int small = 0; small < n; ++small) {
@@ -15,6 +15,7 @@ void DirectedGraph::AddEdge(const BucketState& from, const BucketState& to) {
     adjList[from].push_back(to);
 }
 
+// Returns sorted list of neighbors for a given node
 vector<BucketState> DirectedGraph::GetAdjList(const BucketState& u) const {
     auto it = adjList.find(u);
     if (it == adjList.end())
@@ -25,15 +26,6 @@ vector<BucketState> DirectedGraph::GetAdjList(const BucketState& u) const {
     return sortedNeighbors;
 }
 
-bool DirectedGraph::Contains(const BucketState& u) const {
-    return adjList.find(u) != adjList.end();
-}
 
-set<BucketState> DirectedGraph::GetAllVertices() const {
-    set<BucketState> vertices;
-    for (const auto& pair : adjList) {
-        vertices.insert(pair.first);
-    }
-    return vertices;
-}
+
 
