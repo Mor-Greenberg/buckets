@@ -128,11 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BucketProblemSolver1.cpp" />
+    <ClCompile Include="BucketProblemSolver2.cpp" />
+    <ClCompile Include="BucketUtils.cpp" />
     <ClCompile Include="DirectedGraph.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BucketProblemSolver1.h" />
+    <ClInclude Include="BucketProblemSolver2.h" />
+    <ClInclude Include="BucketUtils.h" />
     <ClInclude Include="DirectedGraph.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

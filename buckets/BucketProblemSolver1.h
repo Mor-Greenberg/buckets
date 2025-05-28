@@ -24,11 +24,6 @@ public:
     // Find path using BFS
     vector<BucketState> SolveWithBFS();
 
-    // Convert path to actions
-    vector<string> TraceActions(const vector<BucketState>& path) const;
-
-    // Print result
-    void PrintSolution(const vector<BucketState>& path) const;
 
 
 };
