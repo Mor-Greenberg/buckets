@@ -115,27 +115,27 @@ vector<string> BucketProblemSolver1::TraceActions(const vector<BucketState>& pat
 
         // 1. Fill large bucket
         if (currBig > prevBig && currSmall == prevSmall && currBig == L)
-            actions.push_back("Fill large bucket");
+            actions.push_back("Fill large jug");
 
         // 2. Fill small bucket
         else if (currSmall > prevSmall && currBig == prevBig && currSmall == S)
-            actions.push_back("Fill small bucket");
+            actions.push_back("Fill small jug");
 
         // 3. Empty large bucket
         else if (currBig < prevBig && currSmall == prevSmall && currBig == 0)
-            actions.push_back("Empty large bucket");
+            actions.push_back("Empty large jug");
 
         // 4. Empty small bucket
         else if (currSmall < prevSmall && currBig == prevBig && currSmall == 0)
-            actions.push_back("Empty small bucket");
+            actions.push_back("Empty small jug");
 
         // 5. Transfer from small to large bucket
         else if (currBig > prevBig && currSmall < prevSmall)
-            actions.push_back("Transfer from small to large bucket");
+            actions.push_back("Transfer from small jug to large jug");
 
         // 6. Transfer from large to small bucket
         else if (currBig < prevBig && currSmall > prevSmall)
-            actions.push_back("Transfer from large to small bucket");
+            actions.push_back("Transfer from large jug to small jug");
 
         // Fallback 
         else
