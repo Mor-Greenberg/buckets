@@ -21,9 +21,15 @@
     <ClCompile Include="DirectedGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BucketProblemSolver1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DirectedGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BucketProblemSolver1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
